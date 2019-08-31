@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private var playerColorNumber = 0
-    private val targetColorNumber = (Math.random() * 4).toInt()
+    private val targetColorNumber = (Math.random() * 5).toInt()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             1 -> color = Color.BLACK
             2 -> color = Color.BLUE
             3 -> color = Color.RED
+            4 -> color = Color.YELLOW
         }
 
         return color
@@ -56,7 +57,8 @@ class MainActivity : AppCompatActivity() {
                 0 -> playerColorNumber = 1
                 1 -> playerColorNumber = 2
                 2 -> playerColorNumber = 3
-                3 -> playerColorNumber = 0
+                3 -> playerColorNumber = 4
+                4 -> playerColorNumber = 0
             }
 
             setPlayerColor(playerColorNumber)
